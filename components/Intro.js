@@ -8,14 +8,14 @@ const Intro = () => {
                 <div className="absolute bottom-2 left-4 text-white text-3xl">Si il y a un automate, on peut vous aider.</div>
                 <div className="flex absolute -left-16">
                     <Image
-                        src="/images/pipes.jpg" 
+                        src="/images/pipes.png" 
                         height={400} 
                         width={600} 
                         alt="Tuyaux"
                         className="z-30"
                     />
                     <Image
-                        src="/images/panel.jpg" 
+                        src="/images/panel.png" 
                         height={400} 
                         width={918} 
                         alt="Commande tactile"

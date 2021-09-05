@@ -16,8 +16,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: theme => ({
-        'services': "url('/images/services.jpeg')",
-        'bg': "url('/images/bg.jpg')",
+        'services': "url('/images/services.png')",
+        'bg': "url('/images/bg.png')",
        })
     },
   },
