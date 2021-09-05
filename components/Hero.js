@@ -5,7 +5,7 @@ const Hero = () => {
         <>
         <div className="pt-8 pb-48 relative">
             <div className="flex justify-between">
-                <div className="flex flex-col justify-center w-64">
+                <div className="flex flex-col justify-center w-64 text-xl">
                     <div className="text-white my-1.5"><span className="bg-darkBlue py-1 px-8">Compétences en</span></div>
                     <div className="text-white my-1.5"><span className="bg-darkBlue py-1 px-8">Automatisme</span></div>
                     <div className="text-white my-1.5"><span className="bg-darkBlue py-1 px-8">Spécifique</span></div>
