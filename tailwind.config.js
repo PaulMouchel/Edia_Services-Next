@@ -14,7 +14,12 @@ module.exports = {
       white: colors.white,
       black: colors.black,
     },
-    extend: {},
+    extend: {
+      backgroundImage: theme => ({
+        'services': "url('/images/services.jpeg')",
+        'bg': "url('/images/bg.jpg')",
+       })
+    },
   },
   variants: {
     extend: {},

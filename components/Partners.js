@@ -1,8 +1,8 @@
 const Partners = () => {
     return (
-        <div>
+        <section>
             Partners
-        </div>
+        </section>
     )
 }
 

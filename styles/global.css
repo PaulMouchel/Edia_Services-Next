@@ -11,3 +11,7 @@ html {
     border-radius: 0 0 90% 0;
     width: 110%;
 }
+
+.curve-white {
+    border-radius: 0 0 100% 100%;
+}
