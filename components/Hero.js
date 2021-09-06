@@ -1,26 +1,61 @@
 import Image from 'next/image'
+import { useEffect, useState } from 'react';
+import SideText from './SideText';
+import HeroText from './HeroText';
+import { motion } from "framer-motion"
+
+const sideTexts = [
+    "Compétences en",
+    "Automatisme",
+    "Spécifique",
+    "& expérimenté"
+]
+
+const heroTexts = [
+    "La sécurité avant tout",
+    "Si il y a un automate, on peut vous aider"
+]
 
 const Hero = () => {
+    const [toggle, setToggle] = useState(false)
+    let timerInterval = null
+
+    useEffect(() => {
+        timerInterval = setInterval(() => {
+            clearInterval(timerInterval)
+            setToggle(!toggle)
+          }, 2000);
+    })
+
     return (
         <>
         <div className="pt-8 pb-48 relative">
             <div className="flex justify-between mt-12 mb-16 mr-16">
                 <div className="flex flex-col justify-center w-64 text-xl">
-                    <div className="text-white my-1.5"><span className="bg-darkBlue py-1 px-8">Compétences en</span></div>
-                    <div className="text-white my-1.5"><span className="bg-darkBlue py-1 px-8">Automatisme</span></div>
-                    <div className="text-white my-1.5"><span className="bg-darkBlue py-1 px-8">Spécifique</span></div>
-                    <div className="text-white my-1.5"><span className="bg-darkBlue py-1 px-8">& expérimenté</span></div>
+                    {sideTexts.map((text, index) =>
+                        <SideText key={index} text={text} index={index}/>
+                    )}
                 </div>
-                <div className="flex items-center justify-center">
-                    <h1 className="text-6xl">La sécurité avant tout</h1>
-                    {/* <h1 className="text-6xl">Si il y a un automate, on peut vous aider.</h1> */}
+                <div className="relative px-48">
+                    <motion.div 
+                    animate={{ rotate: 360, x: [0, -100, 0] , y: [0, 20, 0] }}
+                    transition={{ ease: "linear", duration: 70, repeat: Infinity }} 
+                    className="absolute top-4 right-4 bg-yellow bg-opacity-60 hero-shape w-96 h-96 z-30">
+                    </motion.div>
+                    <motion.div 
+                    animate={{ rotate: 360, x: [0, 30, 0] , y: [0, 15, 0] }}
+                    transition={{ ease: "linear", duration: 110, repeat: Infinity }} 
+                    className="absolute -right-16 bg-yellow bg-opacity-80 hero-shape w-96 h-96 z-30 transform rotate-90">
+                    </motion.div>
+                </div>
+                <div className="absolute top-48 h-48 z-40">
+                    <HeroText text={heroTexts[0]} visible={!toggle}/>
+                    <HeroText text={heroTexts[1]} visible={toggle}/>
                 </div>
                 <Image
                     src="/images/logo.png" 
                     height={300} 
                     width={235} 
-                    // height={400} 
-                    // width={313} 
                     alt="Logo Edia Services"
                     className="z-30"
                 />
