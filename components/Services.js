@@ -1,6 +1,6 @@
 const Services = () => {
     return (
-        <section className="bg-services bg-cover flex justify-between w-screen">
+        <section className="bg-services bg-cover flex justify-between w-screen min-h-screen">
             <div className="w-1/3 p-8">
                 <h2 className="text-white text-3xl py-4">Nos services</h2>
                 <p className="text-white py-4">Conception et réalisation d’équipements automatisés Prestation d’étude, de programmation et de mise en service d’équipements automatisés</p>
