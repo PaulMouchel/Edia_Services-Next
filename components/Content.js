@@ -1,5 +1,6 @@
 import Hero from "./Hero";
 import Intro from "./Intro";
+import About from "./About";
 import Services from "./Services";
 import Realisations from "./Realisations";
 import Partners from "./Partners";
@@ -10,6 +11,7 @@ const Content = () => {
         <main className="">
             <Hero/>
             <Intro/>
+            <About/>
             <Services/>
             <Realisations/>
             <Partners/>

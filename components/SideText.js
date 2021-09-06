@@ -8,7 +8,7 @@ const SideText = ({text, index}) => {
         },
         visible: {
             x:0,
-            transition: {duration: 0.3, delay: (0.3 + index/10)}
+            transition: {duration: 0.5, delay: (0.3 + index/10)}
         }
     }
 
@@ -18,7 +18,7 @@ const SideText = ({text, index}) => {
         initial="hidden"
         animate="visible"
         className="text-white my-1.5">
-            <span className="bg-darkBlue py-1 px-8">{text}</span>
+            <span className="bg-darkBlue py-1 px-8 text-2xl">{text}</span>
         </motion.div>
     )
 }

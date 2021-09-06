@@ -27,7 +27,7 @@ const HeroText = ({text, visible}) => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="text-center text-6xl hero-text text-darkBlue z-50">
+                    className="text-center text-6xl font-bold hero-text text-darkBlue z-50">
                         {text}
                     </motion.h1>
                 }

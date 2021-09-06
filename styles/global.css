@@ -4,11 +4,6 @@ html {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Agency FB', sans-serif;
-    font-weight: bold;
-  } 
-
   .hero-shape {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
   }
