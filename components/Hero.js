@@ -3,18 +3,7 @@ import { useEffect, useState } from 'react';
 import SideText from './SideText';
 import HeroText from './HeroText';
 import { motion } from "framer-motion"
-
-const sideTexts = [
-    "Compétences en",
-    "Automatisme",
-    "Spécifique",
-    "& expérimenté"
-]
-
-const heroTexts = [
-    "La sécurité avant tout",
-    "Si il y a un automate, on peut vous aider"
-]
+import { sideTexts, heroTexts } from '../data/hero';
 
 const Hero = () => {
     const [toggle, setToggle] = useState(false)

@@ -1,14 +1,7 @@
 import Image from 'next/image'
 import MotionDiv from './MotionDiv'
 import { fadeIn, slideFromLeft } from './animations'
-
-const secteurs = [
-    "Automobile et manufactures diverses (formage, assemblage mutli-métier, peinture, convoyage)",
-    "Agro-alimentaire et conditionnement (lavage, dosage, conditionnement)",
-    "Industrie chimique et environnement (mélangeurs, STEP, incinérateur)",
-    "Sécurité des personnes et des machines",
-    "Gestion et sécurité des bâtiments"
-]
+import { secteurs, dIci2040 } from '../data/about'
 
 const About = () => {
     return (
@@ -34,18 +27,11 @@ const About = () => {
                     style={{maxWidth:"1024px"}}>
                         <span>L’entreprise d’ici 2040 :</span>
                         <ul  className="list-disc pl-8">
-                            <li>
-                                La génération Z arrive dans la vie active,
+                            {dIci2040.map((item, index) =>
+                            <li key={index}>
+                                {item}
                             </li>
-                            <li>
-                                Virtualisation des services et l’ubérisation, 
-                            </li>
-                            <li>
-                                Changement des métiers, 
-                            </li>
-                            <li>
-                                Les entreprises doivent trouver des solutions innovantes et respectueuses de l’environnement
-                            </li>
+                            )}
                         </ul>
                     </MotionDiv>
                 </div>
