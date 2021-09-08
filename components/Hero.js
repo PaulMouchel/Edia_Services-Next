@@ -17,8 +17,7 @@ const Hero = () => {
     })
 
     return (
-        <>
-        <div className="pt-8 pb-48 relative">
+        <div className="pt-6 pb-48 relative">
             <div className="flex justify-between mt-12 mb-16 mr-16">
                 <div className="flex flex-col justify-center w-64 text-xl">
                     {sideTexts.map((text, index) =>
@@ -61,8 +60,6 @@ const Hero = () => {
                 <div className="absolute box-blue bg-lightBlue h-full w-full z-0"></div>
             </div>
         </div>
-        
-        </>
     )
 }
 

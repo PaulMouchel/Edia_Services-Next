@@ -1,22 +1,5 @@
 import Image from 'next/image'
-
-const images = [
-    {
-        src:"actemium",
-        height:45,
-        width:280
-    },
-    {
-        src:"OET",
-        height:99,
-        width:175
-    },
-    {
-        src:"stellantis",
-        height:83,
-        width:352
-    },
-]
+import { images } from '../data/partners'
 
 const Partners = () => {
     return (
@@ -26,9 +9,8 @@ const Partners = () => {
                 <div className="bg-white absolute -left-12 -right-12 curve-white h-64 z-30">
                     <div className="flex justify-evenly transform translate-y-6 z-40">
                         {images.map((image, index) => 
-                            <div className="flex items-center">
+                            <div key={index} className="flex items-center">
                                 <Image
-                                    key={index}
                                     src={`/images/${image.src}.png`} 
                                     height={image.height} 
                                     width={image.width} 

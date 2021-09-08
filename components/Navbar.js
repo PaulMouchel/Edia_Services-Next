@@ -1,21 +1,45 @@
+import { useScrollYPosition } from 'react-use-scroll-position';
+import { motion, AnimatePresence } from "framer-motion";
+import NavbarContent from "./NavbarContent";
+
+const navbarVariant = {
+    hidden: {
+        y:-100,
+        opacity: 0
+    },
+    visible: {
+        y:0,
+        opacity: 1,
+        transition: {duration: 0.5}
+    },
+    exit: {
+        y:-100,
+        opacity: 0,
+        transition: {duration: 0.5}
+    },
+}
+
 const Navbar = () => {
+    const scrollY = useScrollYPosition();
+
     return (
-        <nav className="bg-blue text-white py-6">
-            <ul className="flex justify-center">
-                <a href='#services'>
-                    <li className="px-4">Nos Services</li>
-                </a>
-                <a href='#realisations'>
-                    <li className="px-4">Nos Réalisations</li>
-                </a>
-                <a href='#partenaires'>
-                    <li className="px-4">Nos Partnaires</li>
-                </a>
-                <a href='#contact'>
-                    <li className="px-4">Nous contacter</li>
-                </a>
-            </ul>
-        </nav>
+        <>
+            <AnimatePresence>
+                {scrollY > 300 &&
+                    <motion.nav 
+                    variants={navbarVariant}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className="bg-blue text-white py-6 w-screen z-50 fixed bg-opacity-70">
+                        <NavbarContent/>
+                    </motion.nav>
+                }
+            </AnimatePresence>
+            <nav className="bg-blue text-white py-6 w-screen z-50">
+                <NavbarContent/>
+            </nav>
+        </>
     )
 }
 
