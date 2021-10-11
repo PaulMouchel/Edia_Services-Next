@@ -30,7 +30,7 @@ const Contact = () => {
                     </div>
                     <form className="max-w-6xl m-auto">
                         <div className="flex justify-between gap-4">
-                            <div className="flex flex-col justify-between">
+                            <div className="flex flex-col justify-between w-1/2">
                                 <InputField type="text" placeholder="Nom" name="last name" reference={lastNameRef} autoComplete="family-name"/>
                                 <InputField type="text" placeholder="Prenom" name="first name" reference={firstNameRef} autoComplete="given-name"/>
                                 <InputField type="email" placeholder="Mail" name="mail" reference={emailRef} autoComplete="email" />

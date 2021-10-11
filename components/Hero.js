@@ -24,8 +24,8 @@ const Hero = () => {
                         <SideText key={index} text={text} index={index}/>
                     )}
                 </div>
-                <div className="relative px-48">
-                <motion.div 
+                <div className="hidden md:relative px-48">
+                    <motion.div 
                     animate={{ rotate: 360, x: [0, -40, 0] , y: [0, -10, 0], scale: [1, 1.15, 0.95, 1] }}
                     transition={{ ease: "linear", duration: 90, repeat: Infinity }} 
                     className="absolute top-16 bg-blue bg-opacity-40 hero-shape w-96 h-96 z-30 transform rotate-90">

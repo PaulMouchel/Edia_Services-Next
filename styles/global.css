@@ -4,7 +4,15 @@
 html {
     overflow-x: hidden;
     font-family: 'Libre Franklin', sans-serif;
+    font-size: 75%;
+    scroll-behavior: smooth;
 }
+  
+  @media (min-width: 768px) {
+    html{
+      font-size: 100%;
+    }
+  }
 
   .hero-shape {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
