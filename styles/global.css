@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
 
 html {
     overflow-x: hidden;
+    font-family: 'Libre Franklin', sans-serif;
 }
 
   .hero-shape {
@@ -25,3 +27,9 @@ html {
 .curve-green {
     border-radius: 0 0 100% 100%;
 }
+
+.btn:hover .btn__slide {
+    width: calc(100% + 15px);
+  }
+  
+
