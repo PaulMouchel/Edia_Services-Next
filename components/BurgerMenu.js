@@ -5,15 +5,15 @@ const BurgerMenu = ({open, setOpen}) => {
 
     const navbarVariant = {
         hidden: {
-            x:"100vw",
+            x:"50vw",
         },
         visible: {
             x:"0vw",
-            transition: {duration: 1}
+            transition: {duration: 0.5}
         },
         exit: {
-            x:"100vw",
-            transition: {duration: 1}
+            x:"50vw",
+            transition: {duration: 0.5}
         },
     }
 

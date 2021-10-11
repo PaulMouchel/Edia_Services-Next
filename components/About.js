@@ -37,9 +37,9 @@ const About = () => {
                 </div>
             </div>
             <div className="p-12">
-                <div className="flex justify-evenly items-center">
+                <div className="flex flex-col-reverse md:flex-row justify-evenly items-center">
                     <div>
-                        <h3 className="text-xl italic font-bold">EDIA Services a été créé en 2017 par Mathieu PANNIER, automaticien, chef de projet depuis 20 ans.</h3>
+                        <h3 className="text-xl italic font-bold mt-8 md:mt-0">EDIA Services a été créé en 2017 par Mathieu PANNIER, automaticien, chef de projet depuis 20 ans.</h3>
                         <p className="text-white text-xl italic font-bold">Nous intervenons pour nos clients intégrateurs dans plusieurs secteurs d’activités :</p>
                         <ul>
                             {secteurs.map((secteur, index) => 

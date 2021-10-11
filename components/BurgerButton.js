@@ -1,23 +1,27 @@
 import { useState } from "react";
 import BurgerMenu from "./BurgerMenu";
-import UseAnimations from 'react-useanimations';
-import menu3 from 'react-useanimations/lib/menu3'
 
 const BurgerButton = () => {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
+    const spanClasses = "block absolute bg-gray-800 h-2"
 
     return (
         <>
-            <div className="fixed top-4 right-4 z-50">
-                <UseAnimations
-                reverse={open}
-                onClick={() => {
-                    setOpen(!open);
-                }} 
-                size={40}
-                animation={menu3} />
+            <div className="fixed top-8 right-6 z-50">
+                <div 
+                id="nav-icon" 
+                className={`${open && "open"} cursor-pointer relative`} 
+                onClick={() => {setOpen(!open);}}>
+                    <span className={spanClasses}></span>
+                    <span className={spanClasses}></span>
+                    <span className={spanClasses}></span>
+                    <span className={spanClasses}></span>
+                    <span className={spanClasses}></span>
+                    <span className={spanClasses}></span>
+                </div>
             </div>
             <BurgerMenu open={open} setOpen={setOpen}/>
+            
         </>
     )
 }

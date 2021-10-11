@@ -8,7 +8,7 @@ import Contact from "./Contact";
 
 const Content = () => {
     return (
-        <main className="">
+        <main className="overflow-x-hidden">
             <Hero/>
             <Intro/>
             <About/>
