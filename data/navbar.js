@@ -8,8 +8,8 @@ export const sections = [
         hash:"services"
     },
     {
-        text:"Nos Réalisations",
-        hash:"realisations"
+        text:"Actualités",
+        hash:"news"
     },
     {
         text:"Nos Partenaires",

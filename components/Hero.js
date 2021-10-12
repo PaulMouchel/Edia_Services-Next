@@ -55,8 +55,8 @@ const Hero = () => {
                 
             </div>
             <div className="h-64 absolute bottom-0 w-full">
-                <div className="absolute box-white bg-white h-60 z-20"></div>
-                <div className="absolute box-green bg-green h-full z-10"></div>
+                <div className="absolute box-white bg-white h-60 z-10"></div>
+                <div className="absolute box-green bg-green h-full " style={{zIndex:5}}></div>
                 <div className="absolute box-blue bg-lightBlue h-full w-full z-0"></div>
             </div>
         </div>

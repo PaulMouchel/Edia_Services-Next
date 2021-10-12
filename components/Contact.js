@@ -1,6 +1,5 @@
 import { useRef } from 'react'
-import { FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa'
-import { MdPhoneInTalk } from 'react-icons/md'
+import { FaMapMarkerAlt } from 'react-icons/fa'
 import InputField from './InputField'
 import TextField from './TextField'
 import Button from './Button'
@@ -20,14 +19,7 @@ const Contact = () => {
                         <FaMapMarkerAlt className="text-4xl mr-2"/>
                         <div className="text-3xl">4, le clos rolant - 35190 Miniac sous Becherel</div>
                     </div>
-                    <div className="flex justify-center items-center py-4">
-                        <FaEnvelope className="text-4xl mr-2"/>
-                        <div className="text-3xl font-bold">Mel : contact@ediaservices.fr</div>
-                    </div>
-                    <div className="flex justify-center items-center py-4">
-                        <MdPhoneInTalk className="text-4xl mr-2"/>
-                        <div className="text-4xl font-bold">06 27 19 76 69</div>
-                    </div>
+                    
                     <form className="max-w-6xl m-auto">
                         <div className="flex justify-between gap-4">
                             <div className="flex flex-col justify-between w-1/2">

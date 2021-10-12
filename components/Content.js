@@ -2,7 +2,7 @@ import Hero from "./Hero";
 import Intro from "./Intro";
 import About from "./About";
 import Services from "./Services";
-import Realisations from "./Realisations";
+import News from "./News";
 import Partners from "./Partners";
 import Contact from "./Contact";
 
@@ -13,7 +13,7 @@ const Content = () => {
             <Intro/>
             <About/>
             <Services/>
-            <Realisations/>
+            <News/>
             <Partners/>
             <Contact/>
       </main>

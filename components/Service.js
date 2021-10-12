@@ -1,7 +1,7 @@
 const Service = (props) => {
     return (
-        <li className="text-white py-4 flex items-center">
-            <props.icon className="text-3xl mr-4"/>
+        <li className="text-white py-6 flex items-center">
+            <img src={props.img} className="mr-5"/>
             <span>{props.text}</span>
         </li>
     )
