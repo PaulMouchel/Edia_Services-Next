@@ -6,14 +6,14 @@ import News from "./News";
 import Partners from "./Partners";
 import Contact from "./Contact";
 
-const Content = () => {
+const Content = ({news}) => {
     return (
         <main className="overflow-x-hidden">
             <Hero/>
             <Intro/>
             <About/>
             <Services/>
-            <News/>
+            <News news={news}/>
             <Partners/>
             <Contact/>
       </main>

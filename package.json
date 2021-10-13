@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.4.0",
     "contentful": "^9.1.2",
     "framer-motion": "^4.1.17",
     "framer-motion-hooks": "^1.0.9",

@@ -5,10 +5,21 @@ import Footer from '../components/Footer'
 import { createClient } from 'contentful'
 
 export async function getStaticProps() {
-  const client = createClient()
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOCKEN
+  })
+
+  const res = await client.getEntries({ content_type:'blogPost'})
+
+  return {
+    props: {
+      news: res.items
+    }
+  }
 }
 
-export default function Home() {
+export default function Home({ news }) {
   return (
     <div className="min-h-screen">
       <Head>
@@ -16,7 +27,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <Content/>
+      <Content news={news}/>
       <Footer/>
     </div>
   )
