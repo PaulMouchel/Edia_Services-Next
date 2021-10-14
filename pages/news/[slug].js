@@ -37,9 +37,17 @@ export const getStaticProps = async ({ params }) => {
 }
 
 export default function NewsArticleDetail({ blogPost }) {
+    const {title, date, body, thumbnail} = blogPost.fields
+    console.log(blogPost)
     return (
         <div>
-            
+            {title}
+            {date}
+            <Image 
+            src={"https:" + thumbnail.fields.file.url}
+            height={thumbnail.fields.file.details.image.height}
+            width={thumbnail.fields.file.details.image.width}/>
+            {documentToReactComponents(body)}
         </div>
     )
 }
