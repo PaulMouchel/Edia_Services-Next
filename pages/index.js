@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import Content from '../components/Content'
-import Footer from '../components/Footer'
 import { createClient } from 'contentful'
 
 export async function getStaticProps() {
@@ -14,7 +13,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      news: res.items
+      news: res.items.sort((a, b) => new Date(b.fields.date) - new Date(a.fields.date))
     },
     revalidate: 1
   }
@@ -29,7 +28,6 @@ export default function Home({ news }) {
       </Head>
       <Header/>
       <Content news={news}/>
-      <Footer/>
     </div>
   )
 }

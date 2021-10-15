@@ -15,6 +15,11 @@ module.exports = {
       white: colors.white,
       black: colors.black,
     },
+    listStyleType: {
+      none: 'none',
+     disc: 'disc',
+     decimal: 'decimal'
+    },
     extend: {
       backgroundImage: theme => ({
         'services': "url('/images/services.png')",

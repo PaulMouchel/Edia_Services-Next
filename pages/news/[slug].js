@@ -2,6 +2,7 @@ import { createClient } from 'contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Image from 'next/image'
 import SkeletonNewsArticle from '../../components/SkeletonNewsArticle'
+import { useFormatedDate } from '../../hooks/useFormatedDate'
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -51,16 +52,33 @@ export default function NewsArticleDetail({ blogPost }) {
     if(!blogPost) return <SkeletonNewsArticle/>
 
     const {title, date, body, thumbnail} = blogPost.fields
-    console.log(blogPost)
+    const formatedDate = useFormatedDate(date)
+
     return (
         <div>
-            {title}
-            {date}
             <Image 
             src={"https:" + thumbnail.fields.file.url}
             height={thumbnail.fields.file.details.image.height}
             width={thumbnail.fields.file.details.image.width}/>
-            {documentToReactComponents(body)}
+            <div className="py-6 max-w-4xl mx-auto">
+                <div>
+                    <h1 className="text-4xl">{title}</h1>
+                </div>
+                <div>
+                    {formatedDate}
+                </div>
+
+                <div>
+                    <ul className="list-disc">
+                        <li style={{display:'list-item'}}>Item1</li>
+                        <li>Item2</li>
+                        <li>Item3</li>
+                    </ul>
+                </div>
+                <div className="article-content">
+                    {documentToReactComponents(body)}
+                </div>
+            </div>
         </div>
     )
 }
