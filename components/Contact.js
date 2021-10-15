@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { FaMapMarkerAlt } from 'react-icons/fa'
 import InputField from './InputField'
 import TextField from './TextField'
-import Button from './Button'
+import RecaptchaButton from './RecaptchaButton'
 
 const Contact = () => {
     const lastNameRef = useRef()
@@ -30,9 +30,10 @@ const Contact = () => {
                             </div>
                             <TextField placeholder="Ecrivez votre message" name="message" reference={messageRef} autoComplete="off"/>
                         </div>
-                        <Button className="self-end" type="submit" value="Send">
+                        <RecaptchaButton 
+                        className="self-end" type="submit" value="Send">
                             Envoyer
-                        </Button>
+                        </RecaptchaButton>
                     </form>
                 </div>
             </div>
