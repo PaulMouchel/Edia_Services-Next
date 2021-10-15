@@ -55,8 +55,8 @@ export default function NewsArticleDetail({ blogPost }) {
     const formatedDate = useFormatedDate(date)
 
     return (
-        <div className="bg-bg bg-cover">
-            <div className="bg-opacity-70 bg-blue">
+        <div className="bg-bg bg-cover min-h-screen">
+            <div className="bg-opacity-70 bg-blue min-h-screen">
                 <div className="py-10">
                     <div className="max-w-6xl mx-auto bg-gray-50 bg-opacity-90">
                         <div className="p-8">

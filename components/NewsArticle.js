@@ -16,7 +16,7 @@ export default function NewsArticle({ post }) {
             />
             </div>
             <div className="p-2">
-                <h4 className="text-xl font-bold">{title}</h4>
+                <h4 className="text-xl font-bold pt-2">{title}</h4>
                 <p className="text-right text-sm">le {formatedDate}</p>
                 <p className="pt-3">{description}</p>
             </div>

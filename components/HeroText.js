@@ -20,18 +20,20 @@ const heroTextVariant = {
 const HeroText = ({text, visible}) => {
     return (
         <div className="absolute w-screen">
-            <AnimatePresence>
-                {visible &&
-                    <motion.h1 
-                    variants={heroTextVariant}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    className="text-center text-6xl font-bold hero-text text-darkBlue z-50">
-                        {text}
-                    </motion.h1>
-                }
-            </AnimatePresence>
+            <div className="max-w-4xl m-auto h-48 flex justify-center items-center">
+                <AnimatePresence>
+                    {visible &&
+                        <motion.h1 
+                        variants={heroTextVariant}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        className="text-center text-6xl font-bold hero-text text-darkBlue z-50">
+                            {text}
+                        </motion.h1>
+                    }
+                </AnimatePresence>
+            </div>
         </div>
     )
 }
