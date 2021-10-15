@@ -126,21 +126,25 @@ html {
 .article-content h2 {
     font-size: 1.875rem;
     line-height: 2.25rem;
+    margin: 0.5rem 0 0.5rem 0;
 }
 
 .article-content h3 {
     font-size: 1.5rem;
     line-height: 2rem;
+    margin: 0.5rem 0 0.5rem 0;
 }
 
 .article-content h4 {
     font-size: 1.25rem;
     line-height: 1.75rem;
+    margin: 0.25rem 0 0.25rem 0;
 }
 
 .article-content h5 {
     font-size: 1.125rem;
     line-height: 1.75rem; 
+    margin: 0.25rem 0 0.25rem 0;
 }
 
 .article-content b {
@@ -166,10 +170,12 @@ html {
 
 .article-content ul {
     list-style: disc;
+    margin: 0.5rem 0 0.5rem 0;
 }
 
 .article-content ol {
     list-style-type: decimal;
+    margin: 0.5rem 0 0.5rem 0;
 }
 
 .article-content blockquote {

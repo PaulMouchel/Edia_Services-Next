@@ -55,28 +55,32 @@ export default function NewsArticleDetail({ blogPost }) {
     const formatedDate = useFormatedDate(date)
 
     return (
-        <div>
-            <Image 
-            src={"https:" + thumbnail.fields.file.url}
-            height={thumbnail.fields.file.details.image.height}
-            width={thumbnail.fields.file.details.image.width}/>
-            <div className="py-6 max-w-4xl mx-auto">
-                <div>
-                    <h1 className="text-4xl">{title}</h1>
-                </div>
-                <div>
-                    {formatedDate}
-                </div>
+        <div className="bg-bg bg-cover">
+            <div className="bg-opacity-70 bg-blue">
+                <div className="py-10">
+                    <div className="max-w-6xl mx-auto bg-gray-50 bg-opacity-90">
+                        <div className="p-8">
+                            <div className="h-72 relative">
+                                <Image 
+                                src={"https:" + thumbnail.fields.file.url}
+                                layout="fill"
+                                objectFit="cover"
+                                />
+                            </div>
+                        </div>
+                        <div className="py-6 max-w-3xl mx-auto">
+                            <div>
+                                <h1 className="text-4xl my-2">{title}</h1>
+                            </div>
+                            <div className="text-right mb-10">
+                                le {formatedDate}
+                            </div>
 
-                <div>
-                    <ul className="list-disc">
-                        <li style={{display:'list-item'}}>Item1</li>
-                        <li>Item2</li>
-                        <li>Item3</li>
-                    </ul>
-                </div>
-                <div className="article-content">
-                    {documentToReactComponents(body)}
+                            <div className="article-content">
+                                {documentToReactComponents(body)}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
