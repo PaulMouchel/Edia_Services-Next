@@ -14,7 +14,7 @@ export default function RecaptchaButton({ children, className, type, value }) {
             />
             <Button 
             disabled={!tocken}
-            className={className} type={type} value={value}>
+            className={`${className} ${tocken ? "cursor-pointer" : "cursor-default"}`} type={type} value={value}>
                 {children}
                 
             </Button>

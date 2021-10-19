@@ -7,7 +7,7 @@ export default function NewsArticle({ post }) {
     const formatedDate = useFormatedDate(date)
 
     return (
-        <div className="border relative pb-12">
+        <div className="border relative pb-12 shadow-lg rounded-lg overflow-hidden">
             <div className="h-48 relative">
             <Image 
             src={"https:" + thumbnail.fields.file.url}
@@ -20,7 +20,7 @@ export default function NewsArticle({ post }) {
                 <p className="text-right text-sm">le {formatedDate}</p>
                 <p className="pt-3">{description}</p>
             </div>
-            <button className="absolute right-0 bottom-0 bg-green py-1 px-2">
+            <button className="absolute right-0 bottom-0 bg-green py-2 px-3 font-bold text-white rounded-tl-lg">
                 <Link href={`/news/${slug}`}>
                     <a>En savoir plus</a>
                 </Link>

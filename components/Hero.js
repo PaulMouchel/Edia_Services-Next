@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react';
 import SideText from './SideText';
 import HeroText from './HeroText';
-import { motion } from "framer-motion"
+import ColoredShapes from './ColoredShapes';
 import { sideTexts, heroTexts } from '../data/hero';
 
 const Hero = () => {
@@ -18,33 +18,27 @@ const Hero = () => {
 
     return (
         <div className="pt-6 pb-48 relative">
-            <div className="flex justify-between mt-12 mb-16 mr-16">
+            <div className="md:hidden text-center mt-8">
+                <Image
+                    src="/images/logo.png" 
+                    height={200} 
+                    width={157} 
+                    alt="Logo Edia Services"
+                    className="z-20"
+                />
+            </div>
+            <div className="flex flex-col-reverse md:flex-row justify-between mt-12 mb-16 mr-16">
                 <div className="flex flex-col justify-center w-64 text-xl">
                     {sideTexts.map((text, index) =>
                         <SideText key={index} text={text} index={index}/>
                     )}
                 </div>
-                <div className="hidden md:block relative px-48">
-                    <motion.div 
-                    animate={{ rotate: 360, x: [0, -40, 0] , y: [0, -10, 0], scale: [1, 1.15, 0.95, 1] }}
-                    transition={{ ease: "linear", duration: 90, repeat: Infinity }} 
-                    className="absolute top-16 bg-blue bg-opacity-40 hero-shape w-96 h-96 z-20 transform rotate-90">
-                    </motion.div>
-                    <motion.div 
-                    animate={{ rotate: 360, x: [0, -100, 0] , y: [0, 20, 0], scale: [1, 1.15, 0.95, 1] }}
-                    transition={{ ease: "linear", duration: 70, repeat: Infinity }} 
-                    className="absolute top-4 right-12 bg-green bg-opacity-60 hero-shape w-96 h-96 z-20">
-                    </motion.div>
-                    <motion.div 
-                    animate={{ rotate: 360, x: [0, 30, 0] , y: [0, 45, 0], scale: [1, 0.9, 1.10, 1] }}
-                    transition={{ ease: "linear", duration: 110, repeat: Infinity }} 
-                    className="absolute -top-8 -right-16 bg-yellow bg-opacity-80 hero-shape w-96 h-96 z-20 transform rotate-90">
-                    </motion.div>
-                </div>
-                <div className="absolute top-48 h-48 z-30">
+                <ColoredShapes/>
+                <div className="block md:absolute md:top-48 h-48 z-30">
                     <HeroText text={heroTexts[0]} visible={!toggle}/>
                     <HeroText text={heroTexts[1]} visible={toggle}/>
                 </div>
+                <div className="hidden md:block">
                 <Image
                     src="/images/logo.png" 
                     height={300} 
@@ -52,6 +46,7 @@ const Hero = () => {
                     alt="Logo Edia Services"
                     className="z-20"
                 />
+                </div>
                 
             </div>
             <div className="h-64 absolute bottom-0 w-full">
