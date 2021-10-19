@@ -20,7 +20,7 @@ export default function NewsArticle({ post }) {
                 <p className="text-right text-sm">le {formatedDate}</p>
                 <p className="pt-3">{description}</p>
             </div>
-            <button className="absolute right-0 bottom-0 bg-green py-2 px-3 font-bold text-white rounded-tl-lg">
+            <button className="absolute right-0 bottom-0 bg-green py-2 px-3 font-bold text-white rounded-tl-lg focus:outline-none">
                 <Link href={`/news/${slug}`}>
                     <a>En savoir plus</a>
                 </Link>
