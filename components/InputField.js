@@ -6,7 +6,6 @@ const InputField = (props) => {
         bg-white
         text-gray-800 
         resize-none 
-        block   
         w-full
         border-2 
         border-green 

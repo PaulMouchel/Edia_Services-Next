@@ -6,7 +6,7 @@ export default function RecaptchaButton({ children, className, type, value }) {
     const [tocken, setTocken] = useState("")
 
     return (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center flex-col md:flex-row mt-8">
             <ReCAPTCHA
                 sitekey={process.env.RECAPTCHA_SITE_KEY}
                 onChange={tocken => setTocken(tocken)}
