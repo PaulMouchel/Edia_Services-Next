@@ -17,6 +17,20 @@ const BurgerMenu = ({open, setOpen}) => {
         },
     }
 
+    const backgroundVariant = {
+        hidden: {
+            opacity:"0%",
+        },
+        visible: {
+            opacity:"50%",
+            transition: {duration: 0.5}
+        },
+        exit: {
+            opacity:"0%",
+            transition: {duration: 0.5}
+        },
+    }
+
     const goToSection = (id) => {
         const el = document.getElementById(id)
         const position = el.offsetTop
@@ -27,18 +41,29 @@ const BurgerMenu = ({open, setOpen}) => {
     return (
         <AnimatePresence>
             {open &&
-                <motion.div 
+                <>
+                    <motion.div 
+                    variants={backgroundVariant}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className="fixed w-screen h-screen opacity-50 bg-gray-800 z-40"/>
+                    <motion.div 
                     variants={navbarVariant}
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="fixed h-full w-1/2 top-0 right-0 z-40 pt-24 pr-4 bg-white">
-                        <ul className="text-2xl font-bold text-right">
-                            {sections.map((section, index) => 
-                                <li key={index} className="px-4 py-4" onClick={() => goToSection(section.hash)}>{section.text}</li>
-                            )}
-                        </ul>
-                </motion.div>
+                    className="fixed w-1/2 top-0 right-0 z-40  bg-gray-100 rounded-bl-3xl overflow-hidden">
+                        <div className="h-full pt-24 pb-12 px-4">
+                            <ul className="text-xl font-bold text-right text-gray-800">
+                                {sections.map((section, index) => 
+                                    <li key={index} className="px-4 py-4 border-b-2" onClick={() => goToSection(section.hash)}>{section.text}</li>
+                                )}
+                            </ul>
+                        </div>
+                        <div className="h-4 bg-green"/>
+                    </motion.div>
+                </>
             }
         </AnimatePresence>
     )
