@@ -1,7 +1,10 @@
 import { createClient } from 'contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Image from 'next/image'
+import Link from 'next/link'
+import { FaArrowLeft } from 'react-icons/fa';
 import SkeletonNewsArticle from '../../components/SkeletonNewsArticle'
+import Background from '../../components/Background'
 import { useFormatedDate } from '../../hooks/useFormatedDate'
 
 const client = createClient({
@@ -55,34 +58,36 @@ export default function NewsArticleDetail({ blogPost }) {
     const formatedDate = useFormatedDate(date)
 
     return (
-        <div className="bg-bg bg-cover min-h-screen">
-            <div className="bg-opacity-70 bg-blue min-h-screen">
-                <div className="py-10">
-                    <div className="max-w-6xl mx-auto bg-gray-50 bg-opacity-90">
-                        <div className="p-8">
-                            <div className="h-72 relative">
-                                <Image 
-                                src={"https:" + thumbnail.fields.file.url}
-                                layout="fill"
-                                objectFit="cover"
-                                />
-                            </div>
+        <Background className="pb-4">
+            <Link href="/">
+              <a className="z-50 fixed top-4 left-4 rounded-full bg-green p-2 text-xl text-white transition ease-in-out duration-300 hover:bg-white hover:text-green">
+                  <FaArrowLeft/>
+              </a>
+            </Link>
+            <div className="">
+                <div className="max-w-4xl mx-auto bg-gray-50 bg-opacity-90 min-h-screen">
+                    <div className="p-8">
+                        <div className="h-72 relative">
+                            <Image 
+                            src={"https:" + thumbnail.fields.file.url}
+                            layout="fill"
+                            objectFit="cover"
+                            />
                         </div>
-                        <div className="py-6 max-w-3xl mx-auto">
-                            <div>
-                                <h1 className="text-4xl my-2">{title}</h1>
-                            </div>
-                            <div className="text-right mb-10">
-                                le {formatedDate}
-                            </div>
-
-                            <div className="article-content">
-                                {documentToReactComponents(body)}
-                            </div>
+                    </div>
+                    <div className="px-8 max-w-4xl mx-auto">
+                        <div>
+                            <h1 className="text-4xl my-2">{title}</h1>
+                        </div>
+                        <div className="text-right mb-10">
+                            le {formatedDate}
+                        </div>
+                        <div className="article-content">
+                            {documentToReactComponents(body)}
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Background>
     )
 }
