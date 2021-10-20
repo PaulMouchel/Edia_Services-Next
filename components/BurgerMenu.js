@@ -34,7 +34,7 @@ const BurgerMenu = ({open, setOpen}) => {
     const goToSection = (id) => {
         const el = document.getElementById(id)
         const position = el.offsetTop
-        window.scrollTo(0, position)
+        window.scrollTo({ top: position, behavior: 'smooth' })
         setOpen(false)
     }
 
@@ -47,7 +47,8 @@ const BurgerMenu = ({open, setOpen}) => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="fixed w-screen h-screen opacity-50 bg-gray-800 z-40"/>
+                    className="fixed w-screen h-screen opacity-50 bg-gray-800 z-40"
+                    onClick={() => setOpen(false)}/>
                     <motion.div 
                     variants={navbarVariant}
                     initial="hidden"

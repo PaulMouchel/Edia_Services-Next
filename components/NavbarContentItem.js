@@ -7,7 +7,7 @@ const NavbarContentItem = ({text, hash}) => {
     const goToSection = (id) => {
         const el = document.getElementById(id)
         const position = el.offsetTop
-        window.scrollTo(0, position)
+        window.scrollTo({ top: position, behavior: 'smooth' })
     }
 
     return (
