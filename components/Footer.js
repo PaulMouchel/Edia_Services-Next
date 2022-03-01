@@ -15,7 +15,7 @@ const Footer = () => {
                 <div className="w-full h-full border-l border-r border-gray-600" >
                 
                 </div>
-                <div className="flex items-end justify-self-end p-3 text-xs">
+                <div className="flex items-end justify-self-end text-xs">
                     <a
                     href="https://paulmouchel.vercel.app/"
                     target="_blank"

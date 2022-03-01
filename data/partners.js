@@ -14,4 +14,9 @@ export const images = [
         height:83,
         width:352
     },
+    {
+        src:"othua",
+        height:118,
+        width:241
+    }
 ]
