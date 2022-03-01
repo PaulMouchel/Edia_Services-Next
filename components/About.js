@@ -8,13 +8,11 @@ const About = () => {
         <section className="bg-lightBlue py-12" id="about">
             <div className="w-screen px-auto p-12 transform -rotate-3">
                 <MotionDiv {...slideFromLeft}
-                className="bg-darkBlue text-white text-xl p-4 mx-auto"
-                style={{maxWidth:"1024px"}}>
+                className="bg-darkBlue text-white text-xl p-4 mx-auto max-w-5xl">
                     <h3>Ce n’est pas juste de la programmation, ce sont des solutions.</h3>
                 </MotionDiv>
                 <MotionDiv {...slideFromLeft}
-                className="bg-darkBlue text-white text-lg p-4 mt-2 mx-auto" 
-                style={{maxWidth:"1024px"}}>
+                className="bg-darkBlue text-white text-lg p-4 mt-2 mx-auto max-w-5xl">
                     <ul>
                         <li>Besoins en souplesse de charge …</li>
                         <li>Besoins en compétences d’automatisme spécifique et expérimenté …</li>
@@ -23,8 +21,7 @@ const About = () => {
                 </MotionDiv>
                 <div className="transform translate-x-12">
                     <MotionDiv {...slideFromLeft}
-                    className="bg-blue text-white text-md p-4 -mt-2 mx-auto"
-                    style={{maxWidth:"1024px"}}>
+                    className="bg-blue text-white text-md p-4 -mt-2 mx-auto max-w-5xl">
                         <span>L’entreprise d’ici 2040 :</span>
                         <ul  className="list-disc pl-8">
                             {dIci2040.map((item, index) =>

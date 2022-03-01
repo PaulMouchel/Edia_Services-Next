@@ -24,6 +24,7 @@ export default function Home({ news }) {
     <div className="min-h-screen">
       <Head>
         <title>Edia Services</title>
+        <meta name="description" content="Edia Service met à votre services ses compétences en automatismes industriels. Fort de nombreuses années d'expériences dans des dommaines aussi variés que l'automobile ou l'industie agro-alimentaire, Edia Service saura répondre à votre besoin. De nombreux clients nous font déjà confiance en Bretagne mais aussi dans toute la France et même au delà pour la réalisation et l'optimisation de leurs lignes de production automatisées." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>

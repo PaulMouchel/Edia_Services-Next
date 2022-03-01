@@ -59,7 +59,7 @@ export default function NewsArticleDetail({ blogPost }) {
 
     return (
         <Background className="pb-4">
-            <Link href="/">
+            <Link href="/#news">
               <a className="z-50 fixed top-4 left-4 rounded-full bg-green p-2 text-xl text-white transition ease-in-out duration-300 hover:bg-white hover:text-green">
                   <FaArrowLeft/>
               </a>
