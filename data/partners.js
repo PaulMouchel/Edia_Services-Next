@@ -1,22 +1,14 @@
 export const images = [
     {
-        src:"actemium",
-        height:45,
-        width:280
+        src:"actemium"
     },
     {
-        src:"OET",
-        height:99,
-        width:175
+        src:"OET"
     },
     {
-        src:"stellantis",
-        height:83,
-        width:352
+        src:"stellantis"
     },
     {
-        src:"othua",
-        height:118,
-        width:241
+        src:"othua"
     }
 ]
