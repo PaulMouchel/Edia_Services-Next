@@ -8,7 +8,7 @@ const Partners = () => {
             <h2 className="text-4xl my-12 text-center">Nos Partenaires</h2>
             <div className="relative">
                 <div className="bg-white absolute -left-12 -right-12 curve-white h-64 z-30">
-                    <div className="transform translate-y-6 z-40 w-100">
+                    <div className="transform translate-y-6 z-40 w-100 max-w-screen-2xl m-auto">
                         <Carousel>
                             {images.map((image, index) => 
                                 <div key={index}>
