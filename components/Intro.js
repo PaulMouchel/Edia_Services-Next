@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import { images, list } from '../data/intro';
+import { images } from '../data/intro';
 
 const reducer = (accumulator, currentValue) => accumulator + currentValue.width;
 
-const Intro = () => {
+const Intro = ({ intro }) => {
     return (
         <section className="bg-bg bg-cover">
             <div className="bg-opacity-70 bg-blue relative pt-64">
@@ -23,11 +23,11 @@ const Intro = () => {
                 <div className="pb-24 flex justify-center">
                     <div className=" text-white mx-12">
                         <ul className="">
-                            {list.map((text, index) => 
+                            {intro.map((item, index) => 
                                 <li 
                                 key={index}
                                 className="text-2xl my-6">
-                                    {text}
+                                    {item.fields.text}
                                 </li>
                             )}
                         </ul>

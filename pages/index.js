@@ -9,11 +9,13 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_TOCKEN
   })
 
+  const introList = await client.getEntries({ content_type:'intro'})
   const blogPosts = await client.getEntries({ content_type:'blogPost'})
   const partners = await client.getEntries({ content_type:'partner'})
 
   return {
     props: {
+      intro: introList.items.sort((a, b) => new Date(a.sys.createdAt) - new Date(b.sys.createdAt)),
       news: blogPosts.items.sort((a, b) => new Date(b.fields.date) - new Date(a.fields.date)),
       partners
     },
@@ -21,7 +23,8 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ news, partners }) {
+export default function Home({ intro, news, partners }) {
+
   return (
     <div className="min-h-screen">
       <Head>
@@ -30,7 +33,7 @@ export default function Home({ news, partners }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <Content news={news} partners={partners}/>
+      <Content intro={intro} news={news} partners={partners}/>
     </div>
   )
 }

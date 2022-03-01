@@ -2,9 +2,6 @@ import Image from 'next/image'
 import Carousel from './Carousel'
 
 const Partners = ({ partners }) => {
-
-    console.log(partners.items[0].fields.name)
-    console.log(partners.items[0].fields.logo.fields.file.url) 
     return (
         <section id="partenaires" className="pt-12">
             <h2 className="text-4xl my-12 text-center">Nos Partenaires</h2>
