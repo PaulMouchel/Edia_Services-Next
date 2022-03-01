@@ -18,11 +18,11 @@ const Hero = () => {
 
     return (
         <div className="md:pt-24 relative h-hero">
-            <div className="md:hidden text-center pt-8">
+            <div className="md:hidden pl-8 pt-8">
                 <Image
                     src="/images/logo.png" 
-                    height={200} 
-                    width={157} 
+                    height={100} 
+                    width={79} 
                     alt="Logo Edia Services"
                     className="z-20"
                 />
@@ -33,7 +33,7 @@ const Hero = () => {
                         <SideText key={index} text={text} index={index}/>
                     )}
                 </div>
-                <ColoredShapes/>
+                {/* <ColoredShapes/> */}
                 <div className="block md:absolute md:top-48 h-48 z-30">
                     <HeroText text={heroTexts[0]} visible={!toggle}/>
                     <HeroText text={heroTexts[1]} visible={toggle}/>
@@ -51,7 +51,7 @@ const Hero = () => {
             </div>
             <div className="h-64 absolute -bottom-64 w-full">
                 <div className="absolute box-white bg-white h-60 z-10"></div>
-                <div className="absolute box-green bg-green h-full " style={{zIndex:5}}></div>
+                <div className="absolute box-green bg-green h-full" style={{zIndex:5}}></div>
             </div>
         </div>
     )

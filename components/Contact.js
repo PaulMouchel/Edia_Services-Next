@@ -11,8 +11,8 @@ const Contact = () => {
     const messageRef = useRef()
 
     return (
-        <section className="bg-bg bg-cover z-0 min-h-screen pt-16 transform translate-y-16" id="contact">
-            <div className="bg-opacity-70 bg-blue bg-cover min-h-screen z-10 relative">
+        <section className="bg-bg bg-cover z-0 min-h-screen pt-32" >
+            <div className="bg-opacity-70 bg-blue bg-cover min-h-screen z-10 relative" id="contact">
                 <h2 className="text-white text-3xl pb-6 pt-56 text-center ">Nous contacter</h2>
                 <div className="text-white text-center w-screen">                    
                     <form className="max-w-6xl m-auto px-4">

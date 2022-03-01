@@ -16,7 +16,8 @@ const TextField = (props) => {
         p-2 
         outline-none
         md:col-span-2
-        md:row-span-4" 
+        md:row-span-4
+        rounded-md" 
         autoComplete="off" 
         
         required/>

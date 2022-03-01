@@ -3,16 +3,38 @@ import MotionDiv from './MotionDiv'
 import { fadeIn, slideFromLeft } from './animations'
 import { secteurs, dIci2040 } from '../data/about'
 
+const images = [
+    {
+        src:"pipes",
+    },
+    {
+        src:"panel",
+    }
+]
+
 const About = () => {
     return (
         <section className="bg-lightBlue py-12" id="about">
             <div className="w-screen px-auto p-12 transform -rotate-3">
-                <MotionDiv {...slideFromLeft}
+                <MotionDiv {...fadeIn}
                 className="bg-darkBlue text-white text-xl p-4 mx-auto max-w-5xl">
                     <h3>Ce n’est pas juste de la programmation, ce sont des solutions.</h3>
                 </MotionDiv>
-                <MotionDiv {...slideFromLeft}
-                className="bg-darkBlue text-white text-lg p-4 mt-2 mx-auto max-w-5xl">
+                <div className='m-auto' style={{maxWidth:1200}}>
+                    {images.map((image, index) =>
+                        <div key={index} className="relative inline-block overflow-hidden" style={{height:400, width:600}}>
+                            <Image        
+                                src={`/images/${image.src}.png`} 
+                                layout="fill"
+                                objectFit='cover'
+                                alt={image.src}
+                                className="z-30"
+                            />
+                        </div>
+                    )}
+                </div>
+                <MotionDiv {...fadeIn}
+                className="bg-darkBlue text-white text-lg p-4 mx-auto max-w-5xl">
                     <ul>
                         <li>Besoins en souplesse de charge …</li>
                         <li>Besoins en compétences d’automatisme spécifique et expérimenté …</li>
@@ -20,7 +42,7 @@ const About = () => {
                     </ul>
                 </MotionDiv>
                 <div className="transform translate-x-12">
-                    <MotionDiv {...slideFromLeft}
+                    <MotionDiv {...fadeIn}
                     className="bg-blue text-white text-md p-4 -mt-2 mx-auto max-w-5xl">
                         <span>L’entreprise d’ici 2040 :</span>
                         <ul  className="list-disc pl-8">

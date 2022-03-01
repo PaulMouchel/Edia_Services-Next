@@ -11,7 +11,9 @@ const InputField = (props) => {
         border-green 
         focus:border-yellow 
         p-2     
-        outline-none" 
+        outline-none
+        rounded-md
+        " 
         required/>
     )
 }

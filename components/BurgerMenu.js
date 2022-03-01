@@ -5,14 +5,14 @@ const BurgerMenu = ({open, setOpen}) => {
 
     const navbarVariant = {
         hidden: {
-            x:"50vw",
+            x:"15rem",
         },
         visible: {
-            x:"0vw",
+            x:"0rem",
             transition: {duration: 0.5}
         },
         exit: {
-            x:"50vw",
+            x:"15rem",
             transition: {duration: 0.5}
         },
     }
@@ -54,7 +54,7 @@ const BurgerMenu = ({open, setOpen}) => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="fixed w-1/2 top-0 right-0 z-40  bg-gray-100 rounded-bl-3xl overflow-hidden">
+                    className="fixed w-60 top-0 right-0 z-40  bg-gray-100 rounded-bl-3xl overflow-hidden">
                         <div className="h-full pt-24 pb-12 px-4">
                             <ul className="text-xl font-bold text-right text-gray-800">
                                 {sections.map((section, index) => 
