@@ -12,7 +12,7 @@ const Hero = () => {
     }
 
     return (
-        <div className="relative bg-gray-100 flex flex-col justify-center h-[600px] xxxs:h-[780px]" >
+        <div className="relative bg-gray-100 flex flex-col justify-center h-[600px] xxxs:h-[640px]" >
             <Image
                 src={bg} 
                 layout='fill'
@@ -20,7 +20,7 @@ const Hero = () => {
                 alt="Arrière plan"
             />
 
-            <div className="hidden xxxs:block absolute top-4 lg:top-8 lg:right-8 left-4 lg:left-auto">
+            <div className="hidden xxxs:block absolute top-4 lg:top-8 lg:right-8 left-4 lg:left-auto bg-shapes">
                 <div className='h-32 lg:h-44 w-32 lg:w-40 relative'>
                     <Image
                         src="/images/logo.svg" 
@@ -31,7 +31,7 @@ const Hero = () => {
                     />
                 </div>
             </div>
-            <div className='w-screen relative h-72 flex justify-center xl:items-center flex-col-reverse gap-16'>
+            <div className='w-screen relative h-72 flex justify-center xl:items-center flex-col-reverse gap-16 pt-64'>
                 <div className="xl:absolute left-0 flex flex-col justify-center w-64 text-xl z-20 mt-8 md:mt-0">
                     {sideTexts.map((text, index) =>
                         <SideText key={index} text={text} index={index}/>
@@ -51,7 +51,7 @@ const Hero = () => {
             </div>
 
             <div className="h-64 absolute -bottom-64 w-full">
-                <div className="absolute box-white bg-gray-100 h-60 z-10"></div>
+                <div className="absolute box-white bg-gray-100 bg-shapes h-60 z-10"></div>
                 <div className="absolute box-green bg-green h-full" style={{zIndex:5}}></div>
             </div>
         </div>
