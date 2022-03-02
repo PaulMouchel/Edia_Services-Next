@@ -11,17 +11,3 @@ export const fadeIn = {
         }
     }
 }
-
-export const slideFromLeft = {
-    initial:"initial",
-    animate:"visible",
-    variants:{
-        initial: {
-            x: "-100vh"
-        },
-        visible: {
-            x: 0,
-            transition: {duration: 1}
-        }
-    }
-}

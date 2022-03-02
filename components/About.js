@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import MotionDiv from './MotionDiv'
-import { fadeIn, slideFromLeft } from './animations'
+import { fadeIn } from './animations'
 import { secteurs, dIci2040 } from '../data/about'
 
 const images = [
@@ -20,18 +20,20 @@ const About = () => {
                 className="bg-darkBlue text-white text-xl p-4 mx-auto max-w-5xl">
                     <h3>Ce n’est pas juste de la programmation, ce sont des solutions.</h3>
                 </MotionDiv>
-                <div className='m-auto' style={{maxWidth:1200}}>
-                    {images.map((image, index) =>
-                        <div key={index} className="relative inline-block overflow-hidden" style={{height:400, width:600}}>
-                            <Image        
-                                src={`/images/${image.src}.png`} 
-                                layout="fill"
-                                objectFit='cover'
-                                alt={image.src}
-                                className="z-30"
-                            />
-                        </div>
-                    )}
+                <div className='w-[300vw] ml-[-100vw] h-[30vw] max-h-[382px] min-h-[150px] transform -translate-x-12'>
+                    <div className='m-auto w-[110vw] max-w-[1400px]' >
+                        {images.map((image, index) =>
+                            <MotionDiv {...fadeIn} key={index} className="relative inline-block overflow-hidden w-[55vw] h-[30vw] max-w-[700px] max-h-[382px] min-h-[150px]">
+                                <Image        
+                                    src={`/images/${image.src}.png`} 
+                                    layout="fill"
+                                    objectFit='cover'
+                                    alt={image.src}
+                                    className="z-30"
+                                />
+                            </MotionDiv>
+                        )}
+                    </div>
                 </div>
                 <MotionDiv {...fadeIn}
                 className="bg-darkBlue text-white text-lg p-4 mx-auto max-w-5xl">
@@ -41,7 +43,7 @@ const About = () => {
                         <li>… EDIA Services répond à votre besoin en services</li>
                     </ul>
                 </MotionDiv>
-                <div className="transform translate-x-12">
+                <div className="transform translate-x-6 sm:translate-x-12">
                     <MotionDiv {...fadeIn}
                     className="bg-blue text-white text-md p-4 -mt-2 mx-auto max-w-5xl">
                         <span>L’entreprise d’ici 2040 :</span>

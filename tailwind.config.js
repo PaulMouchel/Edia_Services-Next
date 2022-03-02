@@ -5,6 +5,16 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      'xxxs': '360px',
+      'xxs': '420px',
+      'xs': '560px',
+      'sm':	'640px',
+      'md':	'768px',
+      'lg':	'1024px', 
+      'xl':	'1280px',
+      '2xl': '1536px',
+    },
     colors: {
       darkBlue: '#273F7F',
       blue: '#3261AF',
@@ -22,8 +32,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: theme => ({
-        'services': "url('/images/services.png')",
-        'bg': "url('/images/bg.png')",
+        'services': "url('/images/services.webp')",
+        'bg': "url('/images/bg.webp')",
         'shapes': "url('/images/shapeBg.svg')",
        })
     },

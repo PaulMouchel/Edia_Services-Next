@@ -8,11 +8,11 @@ const Hero = () => {
     const knowMore = () => {
         const el = document.getElementById('intro')
         const position = el.offsetTop
-        window.scrollTo({ top: position, behavior: 'smooth' })
+        window.scrollTo({ top: position + 200, behavior: 'smooth' })
     }
 
     return (
-        <div className="relative bg-gray-100 flex flex-col justify-center h-[780px]" >
+        <div className="relative bg-gray-100 flex flex-col justify-center h-[600px] xxxs:h-[640px]" >
             <Image
                 src={bg} 
                 layout='fill'
@@ -20,10 +20,10 @@ const Hero = () => {
                 alt="Arrière plan"
             />
 
-            <div className="absolute top-8 lg:right-8 left-8 lg:left-auto">
-                <div className='h-32 lg:h-44 w-32 relative'>
+            <div className="hidden xxxs:block absolute top-4 lg:top-8 lg:right-8 left-4 lg:left-auto bg-shapes">
+                <div className='h-32 lg:h-44 w-32 lg:w-40 relative'>
                     <Image
-                        src="/images/logo.png" 
+                        src="/images/logo.svg" 
                         layout="fill"
                         objectFit='contain'
                         alt="Logo Edia Services"
@@ -31,14 +31,14 @@ const Hero = () => {
                     />
                 </div>
             </div>
-            <div className='w-screen relative h-72 flex justify-center xl:items-center flex-col-reverse gap-16'>
+            <div className='w-screen relative h-72 flex justify-center xl:items-center flex-col-reverse gap-16 pt-64'>
                 <div className="xl:absolute left-0 flex flex-col justify-center w-64 text-xl z-20 mt-8 md:mt-0">
                     {sideTexts.map((text, index) =>
                         <SideText key={index} text={text} index={index}/>
                     )}
                 </div>
                 <div className='flex flex-col items-center xl:block '>
-                    <div>
+                    <div className='max-w-[90vw]'>
                         <h1 className='text-6xl font-bold'><span className='text-green'>EDIA</span> <span className='text-blue'>Services</span></h1>
                         <p className='text-xl font-bold'>Prestations de services en automatismes</p>
                         <div className='my-10'>
@@ -51,7 +51,7 @@ const Hero = () => {
             </div>
 
             <div className="h-64 absolute -bottom-64 w-full">
-                <div className="absolute box-white bg-gray-100 h-60 z-10"></div>
+                <div className="absolute box-white bg-gray-100 bg-shapes h-60 z-10"></div>
                 <div className="absolute box-green bg-green h-full" style={{zIndex:5}}></div>
             </div>
         </div>
