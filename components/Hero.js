@@ -38,7 +38,7 @@ const Hero = () => {
                     )}
                 </div>
                 <div className='flex flex-col items-center xl:block '>
-                    <div>
+                    <div className='max-w-[90vw]'>
                         <h1 className='text-6xl font-bold'><span className='text-green'>EDIA</span> <span className='text-blue'>Services</span></h1>
                         <p className='text-xl font-bold'>Prestations de services en automatismes</p>
                         <div className='my-10'>
