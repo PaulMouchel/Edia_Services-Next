@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 
 html {
     overflow-x: hidden;
@@ -8,15 +7,15 @@ html {
     font-size: 80%;
 }
   
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     html{
       font-size: 100%;
     }
-  }
+}
 
-  .hero-shape {
+.hero-shape {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
-  }
+}
 
 .box-white {
     border-radius: 0 0 100% 0;
@@ -214,13 +213,4 @@ html {
     left: 100%;  
     top: auto;
     bottom: -20px;
-}
-
-.h-hero {
-  height: calc(100vh - 16rem);
-}
-@media (min-width: 768px) {
-  .h-hero {
-    height: calc(100vh - 32rem);
-  }
 }

@@ -31,12 +31,12 @@ const Navbar = () => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="bg-blue text-white py-4 w-screen z-50 fixed bg-opacity-70">
+                    className="bg-blue text-white h-16 w-screen z-50 fixed bg-opacity-70">
                         <NavbarContent/>
                     </motion.nav>
                 }
             </AnimatePresence>
-            <nav className="absolute top-0 left-0 bg-blue text-white py-4 w-screen z-50">
+            <nav className=" bg-blue text-white h-16 w-screen z-50">
                 <NavbarContent/>
             </nav>
         </>
