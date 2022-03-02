@@ -20,10 +20,10 @@ const Hero = () => {
                 alt="Arrière plan"
             />
 
-            <div className="absolute top-8 lg:right-8 left-8 lg:left-auto">
-                <div className='h-32 lg:h-44 w-32 relative'>
+            <div className="absolute top-4 lg:top-8 lg:right-8 left-4 lg:left-auto">
+                <div className='h-32 lg:h-44 w-32 lg:w-40 relative'>
                     <Image
-                        src="/images/logo.png" 
+                        src="/images/logo.svg" 
                         layout="fill"
                         objectFit='contain'
                         alt="Logo Edia Services"
