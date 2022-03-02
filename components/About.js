@@ -23,7 +23,7 @@ const About = () => {
                 <div className='w-[300vw] ml-[-100vw] h-[30vw] max-h-[382px] transform -translate-x-12'>
                     <div className='m-auto w-[110vw] max-w-[1400px]' >
                         {images.map((image, index) =>
-                            <div key={index} className="relative inline-block overflow-hidden w-[55vw] h-[30vw] max-w-[700px] max-h-[382px]">
+                            <MotionDiv {...fadeIn} key={index} className="relative inline-block overflow-hidden w-[55vw] h-[30vw] max-w-[700px] max-h-[382px]">
                                 <Image        
                                     src={`/images/${image.src}.png`} 
                                     layout="fill"
@@ -31,7 +31,7 @@ const About = () => {
                                     alt={image.src}
                                     className="z-30"
                                 />
-                            </div>
+                            </MotionDiv>
                         )}
                     </div>
                 </div>
