@@ -20,10 +20,10 @@ const About = () => {
                 className="bg-darkBlue text-white text-xl p-4 mx-auto max-w-5xl">
                     <h3>Ce n’est pas juste de la programmation, ce sont des solutions.</h3>
                 </MotionDiv>
-                <div className='w-[300vw] ml-[-100vw] h-[30vw] max-h-[382px] transform -translate-x-12'>
+                <div className='w-[300vw] ml-[-100vw] h-[30vw] max-h-[382px] min-h-[150px] transform -translate-x-12'>
                     <div className='m-auto w-[110vw] max-w-[1400px]' >
                         {images.map((image, index) =>
-                            <MotionDiv {...fadeIn} key={index} className="relative inline-block overflow-hidden w-[55vw] h-[30vw] max-w-[700px] max-h-[382px]">
+                            <MotionDiv {...fadeIn} key={index} className="relative inline-block overflow-hidden w-[55vw] h-[30vw] max-w-[700px] max-h-[382px] min-h-[150px]">
                                 <Image        
                                     src={`/images/${image.src}.png`} 
                                     layout="fill"
@@ -43,7 +43,7 @@ const About = () => {
                         <li>… EDIA Services répond à votre besoin en services</li>
                     </ul>
                 </MotionDiv>
-                <div className="transform translate-x-12">
+                <div className="transform translate-x-6 sm:translate-x-12">
                     <MotionDiv {...fadeIn}
                     className="bg-blue text-white text-md p-4 -mt-2 mx-auto max-w-5xl">
                         <span>L’entreprise d’ici 2040 :</span>

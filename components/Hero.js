@@ -8,11 +8,11 @@ const Hero = () => {
     const knowMore = () => {
         const el = document.getElementById('intro')
         const position = el.offsetTop
-        window.scrollTo({ top: position, behavior: 'smooth' })
+        window.scrollTo({ top: position + 200, behavior: 'smooth' })
     }
 
     return (
-        <div className="relative bg-gray-100 flex flex-col justify-center h-[780px]" >
+        <div className="relative bg-gray-100 flex flex-col justify-center h-[600px] xxxs:h-[780px]" >
             <Image
                 src={bg} 
                 layout='fill'
@@ -20,7 +20,7 @@ const Hero = () => {
                 alt="Arrière plan"
             />
 
-            <div className="absolute top-4 lg:top-8 lg:right-8 left-4 lg:left-auto">
+            <div className="hidden xxxs:block absolute top-4 lg:top-8 lg:right-8 left-4 lg:left-auto">
                 <div className='h-32 lg:h-44 w-32 lg:w-40 relative'>
                     <Image
                         src="/images/logo.svg" 

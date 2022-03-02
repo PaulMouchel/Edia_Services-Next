@@ -5,6 +5,11 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      'xxxs': '360px',
+      'xxs': '420px',
+      'xs': '560px',
+    },
     colors: {
       darkBlue: '#273F7F',
       blue: '#3261AF',
