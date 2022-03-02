@@ -3,7 +3,7 @@ import BurgerMenu from "./BurgerMenu";
 
 const BurgerButton = () => {
     const [open, setOpen] = useState(false);
-    const spanClasses = "block absolute bg-gray-800 h-2"
+    const spanClasses = "block absolute bg-gray-700 h-1.5"
 
     return (
         <>

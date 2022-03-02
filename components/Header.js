@@ -4,10 +4,10 @@ import BurgerButton from "./BurgerButton";
 const Header = () => {
     return (
         <>
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
                 <Navbar/>
             </div>
-            <div className="block md:hidden">
+            <div className="block lg:hidden">
                 <BurgerButton/>
             </div>
         </>

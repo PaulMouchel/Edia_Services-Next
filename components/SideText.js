@@ -18,7 +18,7 @@ const SideText = ({text, index}) => {
         initial="hidden"
         animate="visible"
         className="text-white my-1.5">
-            <span className="bg-darkBlue py-1 px-8 text-2xl">{text}</span>
+            <span className="bg-darkBlue py-1 px-8 text-xl sm:text-2xl">{text}</span>
         </motion.div>
     )
 }

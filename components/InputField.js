@@ -6,13 +6,14 @@ const InputField = (props) => {
         bg-white
         text-gray-800 
         resize-none 
-        block   
         w-full
         border-2 
         border-green 
         focus:border-yellow 
         p-2     
-        outline-none" 
+        outline-none
+        rounded-md
+        " 
         required/>
     )
 }

@@ -1,63 +1,58 @@
 import Image from 'next/image'
-import { useEffect, useState } from 'react';
 import SideText from './SideText';
-import HeroText from './HeroText';
-import { motion } from "framer-motion"
-import { sideTexts, heroTexts } from '../data/hero';
+import { sideTexts } from '../data/hero';
+import bg from '../public/images/shapeBg.svg'
 
 const Hero = () => {
-    const [toggle, setToggle] = useState(false)
-    let timerInterval = null
 
-    useEffect(() => {
-        timerInterval = setInterval(() => {
-            clearInterval(timerInterval)
-            setToggle(!toggle)
-          }, 2000);
-    })
+    const knowMore = () => {
+        const el = document.getElementById('intro')
+        const position = el.offsetTop
+        window.scrollTo({ top: position, behavior: 'smooth' })
+    }
 
     return (
-        <div className="pt-6 pb-48 relative">
-            <div className="flex justify-between mt-12 mb-16 mr-16">
-                <div className="flex flex-col justify-center w-64 text-xl">
+        <div className="relative bg-gray-100 flex flex-col justify-center h-[780px]" >
+            <Image
+                src={bg} 
+                layout='fill'
+                objectFit='cover'
+                alt="Arrière plan"
+            />
+
+            <div className="absolute top-8 lg:right-8 left-8 lg:left-auto">
+                <div className='h-32 lg:h-44 w-32 relative'>
+                    <Image
+                        src="/images/logo.png" 
+                        layout="fill"
+                        objectFit='contain'
+                        alt="Logo Edia Services"
+                        className="z-20"
+                    />
+                </div>
+            </div>
+            <div className='w-screen relative h-72 flex justify-center xl:items-center flex-col-reverse gap-16'>
+                <div className="xl:absolute left-0 flex flex-col justify-center w-64 text-xl z-20 mt-8 md:mt-0">
                     {sideTexts.map((text, index) =>
                         <SideText key={index} text={text} index={index}/>
                     )}
                 </div>
-                <div className="hidden md:block relative px-48">
-                    <motion.div 
-                    animate={{ rotate: 360, x: [0, -40, 0] , y: [0, -10, 0], scale: [1, 1.15, 0.95, 1] }}
-                    transition={{ ease: "linear", duration: 90, repeat: Infinity }} 
-                    className="absolute top-16 bg-blue bg-opacity-40 hero-shape w-96 h-96 z-20 transform rotate-90">
-                    </motion.div>
-                    <motion.div 
-                    animate={{ rotate: 360, x: [0, -100, 0] , y: [0, 20, 0], scale: [1, 1.15, 0.95, 1] }}
-                    transition={{ ease: "linear", duration: 70, repeat: Infinity }} 
-                    className="absolute top-4 right-12 bg-green bg-opacity-60 hero-shape w-96 h-96 z-20">
-                    </motion.div>
-                    <motion.div 
-                    animate={{ rotate: 360, x: [0, 30, 0] , y: [0, 45, 0], scale: [1, 0.9, 1.10, 1] }}
-                    transition={{ ease: "linear", duration: 110, repeat: Infinity }} 
-                    className="absolute -top-8 -right-16 bg-yellow bg-opacity-80 hero-shape w-96 h-96 z-20 transform rotate-90">
-                    </motion.div>
+                <div className='flex flex-col items-center xl:block '>
+                    <div>
+                        <h1 className='text-6xl font-bold'><span className='text-green'>EDIA</span> <span className='text-blue'>Services</span></h1>
+                        <p className='text-xl font-bold'>Prestations de services en automatismes</p>
+                        <div className='my-10'>
+                            <p className='text-xl font-bold'>S'il y a un automate, on peut vous aider.</p>
+                            <p className='text-xl font-bold'>La sécurité avant tout !</p>
+                        </div>
+                        <button className='bg-green text-lg font-bold rounded-full px-4 py-2 transition hover:scale-105' onClick={knowMore}>En savoir plus</button>
+                    </div>
                 </div>
-                <div className="absolute top-48 h-48 z-30">
-                    <HeroText text={heroTexts[0]} visible={!toggle}/>
-                    <HeroText text={heroTexts[1]} visible={toggle}/>
-                </div>
-                <Image
-                    src="/images/logo.png" 
-                    height={300} 
-                    width={235} 
-                    alt="Logo Edia Services"
-                    className="z-20"
-                />
-                
             </div>
-            <div className="h-64 absolute bottom-0 w-full">
-                <div className="absolute box-white bg-white h-60 z-10"></div>
-                <div className="absolute box-green bg-green h-full " style={{zIndex:5}}></div>
-                <div className="absolute box-blue bg-lightBlue h-full w-full z-0"></div>
+
+            <div className="h-64 absolute -bottom-64 w-full">
+                <div className="absolute box-white bg-gray-100 h-60 z-10"></div>
+                <div className="absolute box-green bg-green h-full" style={{zIndex:5}}></div>
             </div>
         </div>
     )
