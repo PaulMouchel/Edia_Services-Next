@@ -65,9 +65,9 @@ export default function NewsArticleDetail({ blogPost }) {
               </a>
             </Link>
             <div className="">
-                <div className="max-w-4xl mx-auto bg-gray-50 bg-opacity-90 min-h-screen">
+                <div className="max-w-4xl mx-auto bg-gray-50 rounded-lg bg-opacity-90 min-h-screen">
                     <div className="p-8">
-                        <div className="h-72 relative">
+                        <div className="h-72 relative rounded-lg overflow-hidden">
                             <Image 
                             src={"https:" + thumbnail.fields.file.url}
                             layout="fill"
@@ -75,7 +75,7 @@ export default function NewsArticleDetail({ blogPost }) {
                             />
                         </div>
                     </div>
-                    <div className="px-8 max-w-4xl mx-auto">
+                    <div className="pb-12 px-8 max-w-4xl mx-auto">
                         <div>
                             <h1 className="text-4xl my-2">{title}</h1>
                         </div>

@@ -24,6 +24,7 @@ module.exports = {
       backgroundImage: theme => ({
         'services': "url('/images/services.png')",
         'bg': "url('/images/bg.png')",
+        'shapes': "url('/images/shapeBg.svg')",
        })
     },
   },

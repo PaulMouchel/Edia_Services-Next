@@ -1,9 +1,11 @@
-export default function Background({children, className, ...rest}) {
+const Background = ({children, className, ...rest}) => {
     return (
-        <div className="bg-bg bg-cover">
-            <div className={`bg-opacity-70 bg-blue ${className}`} {...rest}>
+        <div className="bg-gray-900">
+            <div className={`bg-shapes bg-cover py-8 ${className}`} {...rest}>
                 {children}
             </div>
         </div>
     )
 }
+
+export default Background
