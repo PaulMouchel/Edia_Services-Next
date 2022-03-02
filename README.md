@@ -1,29 +1,36 @@
-# Next.js + Tailwind CSS Example
+# Site Vitrine de la société Edia Services
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+![enter image description here](https://media-exp1.licdn.com/dms/image/C4E0BAQGClILIF9hx7g/company-logo_200_200/0/1519886966178?e=2159024400&v=beta&t=KsUiKpbswiw1WR7MiASrQmt_Ab2v5rMjN9ybhpEJIe4)
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+EDIA Services est une société de prestation de services en automatismes basée à Miniac-sous-Becherel en bretagne. Ce site vitrine permet de présenter l'activité, afficher des actualités, et rentrer en contact avec la société.
 
-## Preview
+## A propos
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+Ce projet a été créé avec la stack suivante:
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+-  <a  href="https://nextjs.org/"  title="Next.js"><img  src="https://github.com/get-icon/geticon/raw/master/icons/nextjs-icon.svg"  alt="Next.js"  width="21px"  height="21px"> Next.js</a>
+-  <a  href="https://reactjs.org/"  title="React"><img  src="https://github.com/get-icon/geticon/raw/master/icons/react.svg"  alt="React"  width="21px"  height="21px"> React.js</a>
+-  <a  href="https://tailwindcss.com/"  title="Tailwind CSS"><img  src="https://github.com/get-icon/geticon/raw/master/icons/tailwindcss-icon.svg"  alt="Tailwind CSS"  width="21px"  height="21px"> Tailwind CSS</a>
+-  <a  href="https://www.contentful.com/"  title="Contentful"><img  src="https://github.com/get-icon/geticon/raw/master/icons/contentful.svg"  alt="Contentful"  width="21px"  height="21px"> Contentful</a>
+-  <a  href="https://vercel.com/"  title="Vercel"><img  src="https://github.com/get-icon/geticon/raw/master/icons/vercel.svg"  alt="Vercel"  width="21px"  height="21px"> Vercel</a>
 
-## Deploy your own
+Les données issues de contentful sont utilisées pour générer des pages statique avec Next.js
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## Démarrer
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+Pour démarrer ce projet en local, vous pouvez cloner le repository et exécuter les commandes suivantes
 
-## How to use
+	npm install
+	npm run dev
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+Vous devez également ajouter à la racine du projet le fichier `.env.local` contenant les variables suivantes :
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+	CONTENTFUL_SPACE_ID
+	CONTENTFUL_ACCESS_TOCKEN
+	RECAPTCHA_SITE_KEY
+	RECAPTCHA_SECRET_KEY
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Le projet en cours de développement est visible à l'adresse suivante :
+
+[https://edia-services-development.vercel.app/](https://edia-services-development.vercel.app/)
+  
