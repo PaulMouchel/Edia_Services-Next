@@ -1,9 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: {
       'xxxs': '360px',
@@ -21,7 +19,7 @@ module.exports = {
       lightBlue: '#4C86C5',
       green: '#49b659',
       yellow: '#ffd028',
-      gray: colors.gray,
+      gray: colors.zinc,
       white: colors.white,
       black: colors.black,
     },
@@ -37,9 +35,6 @@ module.exports = {
         'shapes': "url('/images/shapeBg.svg')",
        })
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }
