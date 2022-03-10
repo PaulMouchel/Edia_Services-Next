@@ -75,14 +75,14 @@ export default function NewsArticleDetail({ blogPost }) {
                             />
                         </div>
                     </div>
-                    <div className="pb-12 px-8 max-w-4xl mx-auto">
+                    <div className="pb-12 px-8 max-w-4xl mx-auto prose">
                         <div>
-                            <h1 className="text-4xl my-2">{title}</h1>
+                            <h1>{title}</h1>
                         </div>
                         <div className="text-right mb-10">
                             le {formatedDate}
                         </div>
-                        <div className="article-content">
+                        <div>
                             {documentToReactComponents(body)}
                         </div>
                     </div>
